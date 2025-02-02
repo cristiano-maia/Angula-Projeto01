@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <!-- Título principal informando o que estamos treinando -->
+  <h2 class="text-center mb-4">Property Binding e Event Binding</h2>
+
+
+  <div class="mb-3">
+
+    <label for="colorInput" class="form-label mb-2 fs-20">Digite seu nome:</label>
+
+    <input
+      type="text"
+      id="colorInput"
+      class="form-control w-50"
+      [value]="nameUser"
+      (input)="updateNameUser($event)"
+    >
+    <!-- Rótulo do campo de entrada -->
+    <label for="colorInput" class="form-label mb-2 fs-20">Digite uma cor em inglês:</label>
+
+    <!-- Campo de entrada onde o usuário digita a cor -->
+    <!-- Property Binding: o valor inicial vem da propriedade 'buttonColor' -->
+    <!-- Event Binding: quando o usuário digita, chama o método 'updateColor' -->
+    <input
+    type="text"
+    id="colorInput"
+    class="form-control w-50"
+    [value]="buttonColor"
+    (input)="updateColor($event)"
+  >
+  </div>
+
+  <!-- Caixa que muda de cor dinamicamente -->
+  <!-- Property Binding: altera o 'backgroundColor' com base na propriedade 'buttonColor' -->
+  <div class="p-5 mt-3 text-white rounded shadow-lg" [style.backgroundColor]="buttonColor">
+    <p class="text-center fw-bold">Olá: {{ nameUser }}</p>
+    <p class="text-center fw-bold">Cor aplicada: {{ buttonColor }}</p>
+  </div>
+</div>
