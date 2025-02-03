@@ -1,0 +1,14 @@
+<div class="container text-center mt-4">
+  <h1 class="text-primary">&#64;Input e &#64;Output</h1>
+  <p class="text-secondary">Comunicação entre componentes Pai e Filho</p>
+</div>
+<div class="container mt-4 p-4 border rounded shadow bg-light">
+  <h2 class="text-primary text-center">Componente Pai</h2>
+
+  <app-filho
+    [mensagemPai]="mensagemFilho"
+    (mensagemFilho)="mensagemRecebida = $event">
+  </app-filho>
+
+  <p class="mt-3 text-center fw-bold">Mensagem do Filho: <span class="text-success">{{ mensagemRecebida }}</span></p>
+</div>

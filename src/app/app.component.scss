@@ -1,0 +1,11 @@
+.box {
+  display: flex;
+  justify-content: space-around; /* Espaçamento entre os componentes */
+  gap: 10px; /* Espaço entre os elementos */
+  flex-wrap: wrap; /* Permite que quebrem de linha se necessário */
+}
+
+.box > * {
+  flex: 1; /* Faz os componentes ocuparem o mesmo espaço */
+  min-width: 300px; /* Define um tamanho mínimo para evitar quebra */
+}
